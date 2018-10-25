@@ -12,11 +12,17 @@ public:
 	{
 		destRect.x = x;
 		destRect.y = y;
-		destRect.w = width;
-		destRect.h = height;
+		destRect.w = width * xscale;
+		destRect.h = height * yscale;
 
 		SDL_RenderCopy(renderer, texture, NULL, &destRect);
 	}
+
+	int getWidth() { return width; }
+	int getHeight() { return height; }
+	
+	int xscale = 1;
+	int yscale = 1;
 
 private:
 	SDL_Renderer* renderer;

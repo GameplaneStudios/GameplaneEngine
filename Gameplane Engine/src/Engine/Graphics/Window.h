@@ -29,6 +29,8 @@ public:
 
 	SDL_Renderer* getRenderer() { return renderer; }
 
+	static void test();
+
 private:
 	int cnt = 0;
 	bool isRunning;

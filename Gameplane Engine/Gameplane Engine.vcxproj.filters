@@ -38,5 +38,11 @@
     <ClInclude Include="src\Engine\Graphics\Sprite.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="src\Engine\FileIO\Ini.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Test.ini" />
   </ItemGroup>
 </Project>

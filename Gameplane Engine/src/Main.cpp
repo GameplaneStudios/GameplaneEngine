@@ -1,8 +1,15 @@
 #include "Engine/Graphics/Window.h"
 #include "Engine/Object.h"
 #include "Engine/Graphics/Sprite.h"
+#include "Engine/FileIO/Ini.h"
 
 Window* window = NULL;
+
+bool is_file_exist(const char *fileName)
+{
+	std::ifstream infile(fileName);
+	return infile.good();
+}
 
 int main(int argc, char* argv[])
 {
@@ -13,8 +20,6 @@ int main(int argc, char* argv[])
 
 	window = new Window();
 	window->init("Gameplane Engine", 800, 600);
-
-	
 
 	while (window->running())
 	{
